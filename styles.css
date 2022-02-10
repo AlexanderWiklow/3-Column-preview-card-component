@@ -14,6 +14,15 @@
   box-sizing: border-box;
 }
 
+/* main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+} */
+
 html {
   font-size: 15px;
 }
@@ -22,6 +31,17 @@ body {
   font-family: "Big Shoulders Display", cursive;
   font-family: "Lexend Deca", sans-serif;
 }
+
+/* body {
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--neu-gray);
+  font-size: 15px;
+  overflow: hidden;
+  display: flex;
+  height: 100vh;
+  overflow: auto;
+  color: var(--neu-white);
+} */
 
 .container {
   height: 100vh;
@@ -34,11 +54,12 @@ body {
 .card-wrapper {
   display: flex;
   align-items: stretch;
-  justify-content: center;
+  /* justify-content: center; */
   /* max-width: 60%; */
-  height: 400px;
+  height: 450px;
   /* max-width: 10%; */
   max-width: 800px;
+  /* min-width: 400px; */
 }
 
 .title {
@@ -116,14 +137,74 @@ body {
   text-decoration: none;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 837px) {
+  /* body {
+    display: flex;
+    width: 100%;
+    overflow: scroll;
+    flex-wrap: wrap;
+  } */
+
+  main {
+    padding: 50px 0;
+    flex-direction: column;
+  }
+
+  .container {
+    /* height: 100vh; */
+    /* display: flex;
+    align-items: center; */
+    /* width: 100%; */
+    /* justify-content: center;
+    align-items: center; */
+    /* left: 50%; */
+    /* float: none; */
+  }
+
   .card-wrapper {
-    display: block;
+    /* padding-top: 40rem; */
+    /* justify-content: center;
+    align-items: center; */
+    /* flex-direction: column; */
+    /* flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap; */
+
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* overflow: hidden; */
+
+    /* float: none; */
+
+    /* width: 100%; */
+
     /* width: 100%; */
   }
   .card-sedan,
   .card-luxury,
   .card-suvs {
-    width: 100%;
+    /* left: 50%; */
+    /* max-width: 600px; */
+    /* width: 100%; */
+    /* float: none; */
+    min-width: 300px;
+    min-height: 400px;
+  }
+
+  .card-sedan {
+    border-radius: 15px 15px 0 0;
+    /* left: 50%; */
+  }
+  .card-suvs {
+    border-radius: none;
+  }
+  .card-luxury {
+    border-radius: 0 0 15px 15px;
   }
 }
